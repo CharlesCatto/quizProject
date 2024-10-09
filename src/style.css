@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: green;
+    --secondary-color: rgb(255, 0, 0);
+    --dark: #001500;;
+    --light: #f8fdf0;
+}
+
+header  {
+    width: 100%;
+    min-height: 7em;
+    text-align: center;
+    background-image: url(../images/d25cef70f79e106a6ca34cd613f58fd9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--light);
+    padding: 1.5em;
+}
+
+
+
+main {
+    background-image: url(../images/parchemin.png);
+}
