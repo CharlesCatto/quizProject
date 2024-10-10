@@ -9,54 +9,39 @@
 </head>
 
 <body>
+
   <header>
-    <div>
-      <h1>Quiz des grands sorciers</h1>
-      <img src="" alt="" />
-      <img src="" alt="" />
-      <img src="" alt="" />
-      <img src="" alt="" />
-    </div>
+    <h1>Quiz des grands sorciers</h1>
   </header>
 
   <main>
+
     <section class="elementTop">
-      <img id="Ariane">
-      <div id="chrono">chrono</div>
+      <img src="../public/images/Fil_ariane_provisoire.png" alt="Fil d'ariane" id="Ariane">
+      <div id="chrono">00:30</div>
     </section>
 
     <section class="blockQuestion">
-      <article class="question">
-        
+      <article class="questions">
 
-              
           <fieldset class="listReponse">
             <legend>Quel est ton personnage préféré ?</legend>
 
-            <div>
-              <input type="radio" id="huey" name="drone" value="huey" checked />
-              <label for="huey">Reponse1</label>
-            </div>
 
+              <input type="button" id="button" name="reponse1" value="Reponse 1" checked />
 
-            <div>
-              <input type="radio" id="huey" name="drone" value="huey" checked />
-              <label for="huey">Reponse2</label>
-            </div>
+              <input type="button" id="button" name="reponse2" value="Reponse 2" checked />
 
-            <div>
-              <input type="radio" id="huey" name="drone" value="huey" checked />
-              <label for="huey">Reponse3</label>
-            </div>
+              <input type="button" id="button" name="reponse3" value="Reponse 3" checked />
 
-            <div>
-              <input type="radio" id="huey" name="drone" value="huey" checked />
-              <label for="huey">Reponse4</label>
-            </div>
+              <input type="button" id="button" name="reponse4" value="Reponse 4" checked />
+
           </fieldset>
+
           <p class="boutonValider">
             <a href="#">Valider</a>
           </p>
+
       </article>
     </section>
 
@@ -64,7 +49,7 @@
   </main>
 
   <footer>
-
+    <p>2024 QUIZ</p>
   </footer>
 
   <script src="./index.js"></script>

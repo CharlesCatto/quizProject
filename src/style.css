@@ -1,139 +1,153 @@
 :root {
-    --primary-color: green;
-    --secondary-color: rgb(255, 204, 0);
-    --dark: #001500;;
-    --light: #f8fdf0;
+  --primary-color: rgb(5, 4, 73);
+  --secondary-color: rgb(153, 35, 20);
+  --dark: #001500;;
+  --light: #f8fdf0;
 }
 
 * {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "openSans";
-    /* border: dashed red    */
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "openSans";
 }
 
 @font-face {
-    font-family: "harryPotter";
-    src: url(../public/fonts/HARRYP__.TTF);
+  font-family: "harryPotter";
+  src: url(../public/fonts/HARRYP__.TTF);
 }
 
 @font-face {
-    font-family: "openSans";
-    src: url(../public/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+  font-family: "openSans";
+  src: url(../public/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
 }
+
+
 
 a {
-    text-decoration: none;
-    font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 a:visited {
-    color: var(--light);
-  }
+  color: var(--light);
+}
+
 
 h1 {
-    font-family: "harryPotter";
-    text-shadow: 1px 1px 2px red, 0 0 1em rgb(0, 0, 255), 0 0 0.2em rgb(255, 191, 0);
-    padding: 1em;
+  font-family: "harryPotter";
+  text-shadow: 1px 1px 2px red, 0 0 1em rgb(0, 0, 255), 0 0 0.2em rgb(255, 191, 0);
+  padding: 1em;
 }
+
 
 body { 
-    background-image: url(../public/images/parchemin.png);
+  background-image: url(../public/images/parchemin.png);
 }
+
+
+
 
 header  {
-    width: 100%;
-    min-height: 7em;
-    text-align: center;
-    background-image: url(../public/images/img_header.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: var(--light);
-    padding: 1.5em;
+  width: 100%;
+  min-height: 7em;
+  text-align: center;
+  background-image: url(../public/images/img_header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--light);
+  padding: 1.5em;
 }
+
+
+.elementTop {
+  margin-top: 0.8em;
+  display: grid;
+  grid-template-columns: 82% 18%;
+}
+
+#Ariane {
+  width: 90%;
+}
+
+#chrono {
+  margin-top: 0.5em;
+}
+
+
+
+
 
 .blockQuestion {
-    margin-top: 0.5em;
+  margin-top: 1.4em;
 }
 
-.question {
-    margin: 1em;
+.questions {
+  margin: 1em 1.2em;
 }
 
 .listReponse {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.2em;
 }
-
-.listReponse div {
-    
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: var(--primary-color);
-    background-image: linear-gradient(
-      to top left,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2) 30%,
-      rgba(0, 0, 0, 0)
-    );
-}
-
-.listReponse div:hover {
-    background-color: var(--secondary-color);
-}
-
 
 .listReponse legend {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-label {
-    font: "openSans",
-    
-  }
-  
-  input {
-    margin: 0.8rem;
-  }
-  
-  .boutonValider {
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: var(--primary-color);
-    background-image: linear-gradient(
-      to top left,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2) 30%,
-      rgba(0, 0, 0, 0)
-    );
-    box-shadow:
-      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
-  }
-  
-  .boutonValider:hover {
-    background-color: var(--secondary-color);
-  }
-  
-  .boutonValider:active {
-    box-shadow:
-      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
-      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
-  }
+.listReponse input{
+  border: 0;
+  margin: 0.8rem;
+  line-height: 3em;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--light);
+  text-shadow: 1px 1px 1px var(--dark);
+  border-radius: 1.5em;
+  background-color: var(--primary-color);
+} 
 
+.listReponse input:hover {
+  background-color: var(--secondary-color);
+}
+
+.listReponse input:active {
+  background-color: var(--secondary-color);
+}
+
+
+
+.boutonValider {
+  border: 0;
+  line-height: 2.7;
+  margin-top: 0.3em;
+  padding: 0 1em;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--light);
+  text-shadow: 1px 1px 1px var(--dark);
+  border-radius: 1.5em;
+  background-color: var(--secondary-color);
+  box-shadow:
+    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+  
+
+.boutonValider:active {
+  
+  box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+ }
+
+
+ footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5em;
+ }
 
 
