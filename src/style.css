@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: "openSans";
 }
 
 :root {
@@ -10,11 +11,32 @@
     --light: #f8fdf0;
 }
 
+@font-face {
+    font-family: "harryPotter";
+    src: url(../public/fonts/HARRYP__.TTF);
+}
+
+@font-face {
+    font-family: "openSans";
+    src: url(../public/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+
+h1 {
+    font-family: "harryPotter";
+    text-shadow: 1px 1px 2px red, 0 0 1em rgb(0, 0, 255), 0 0 0.2em rgb(255, 191, 0);
+    padding: 1em;
+}
+
+body { 
+    background-image: url(../public/images/parchemin.png);
+}
+
 header  {
     width: 100%;
     min-height: 7em;
     text-align: center;
-    background-image: url(../images/d25cef70f79e106a6ca34cd613f58fd9.jpg);
+    background-image: url(../public/images/img_header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -22,8 +44,16 @@ header  {
     padding: 1.5em;
 }
 
+label {
+    font: "openSans",
+    
+  }
+  
+  input {
+    margin: 0.8rem;
+  }
+  
 
 
-main {
-    background-image: url(../images/parchemin.png);
-}
+
+
