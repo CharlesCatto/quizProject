@@ -1,14 +1,15 @@
+:root {
+    --primary-color: green;
+    --secondary-color: rgb(255, 204, 0);
+    --dark: #001500;;
+    --light: #f8fdf0;
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
     font-family: "openSans";
-}
-
-:root {
-    --primary-color: green;
-    --secondary-color: rgb(255, 0, 0);
-    --dark: #001500;;
-    --light: #f8fdf0;
+    /* border: dashed red    */
 }
 
 @font-face {
@@ -21,6 +22,14 @@
     src: url(../public/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    color: var(--light);
+  }
 
 h1 {
     font-family: "harryPotter";
@@ -44,6 +53,48 @@ header  {
     padding: 1.5em;
 }
 
+.blockQuestion {
+    margin-top: 0.5em;
+}
+
+.question {
+    margin: 1em;
+}
+
+.listReponse {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.listReponse div {
+    
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0)
+    );
+}
+
+.listReponse div:hover {
+    background-color: var(--secondary-color);
+}
+
+
+.listReponse legend {
+    font-weight: bold;
+}
+
 label {
     font: "openSans",
     
@@ -53,7 +104,36 @@ label {
     margin: 0.8rem;
   }
   
-
+  .boutonValider {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0)
+    );
+    box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .boutonValider:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .boutonValider:active {
+    box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
 
 
 
