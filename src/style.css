@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgba(11, 5, 71, 0.964);
+  --primary-color: rgba(192, 156, 40, 0.964);
   --secondary-color: rgb(153, 33, 17);
   --dark: #001500;;
   --light: #f8fdf0;
@@ -7,6 +7,7 @@
 
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "openSans";
 }
@@ -21,8 +22,6 @@
   src: url(../public/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
-
-
 a {
   text-decoration: none;
   font-weight: bold;
@@ -32,21 +31,17 @@ a:visited {
   color: var(--light);
 }
 
-
 h1 {
   font-family: "harryPotter";
   font-size: 3em;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(44, 44, 190), 0 0 0.2em rgb(255, 191, 0);
-  padding: 1em;
-}
-
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(66, 190, 44), 0 0 0.2em rgb(65, 98, 127);
+  padding: 0.5em 0;
+  color: rgb(210, 209, 203);
+  }
 
 body { 
   background-image: url(../public/images/parchemin.png);
 }
-
-
-
 
 header  {
   width: 100%;
@@ -64,30 +59,47 @@ header  {
 
 
 
+
 .elementTop {
-  margin-top: 0.8em;
+  margin-top: 0.1em;
   display: grid;
-  grid-template-columns: 82% 18%;
+  grid-template-columns: 75% 25%;
+  padding: 0 0.5em;
+  
 }
 
 #Ariane {
-  width: 90%;
+  width: 105%;
+  align-self: center;
 }
 
-#chrono {
-  margin-top: 0.5em;
+#timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.417);
+  color: var(--light);
+  
 }
 
+#timer span {
+  font-weight: bolder;
+  font-size: large;
+  padding-right: 0.2em;
+}
+
+.timer-icon {
+  width: 3em;
+  height: 2.5em;
+  margin-right: 10px;
+}
 
 
 
 
 .blockQuestion {
-  margin-top: 1.4em;
-}
-
-.questions {
-  margin: 1em 1.2em;
+  margin: 0.5em 0.2em;
 }
 
 .listReponse {
@@ -98,11 +110,12 @@ header  {
 
 .listReponse legend {
   font-weight: bold;
+  text-align: center;
 }
 
-.listReponse input{
+.answer-btn {
   border: 0;
-  margin: 0.8rem;
+  margin: 0.5rem 0;
   line-height: 3em;
   font-size: 1rem;
   text-align: center;
@@ -110,19 +123,21 @@ header  {
   text-shadow: 1px 1px 1px var(--dark);
   border-radius: 1.5em;
   background-color: var(--primary-color);
-} 
+  width: 100%;
+  cursor: pointer;
+}
 
-.listReponse input:hover {
+.answer-btn:hover {
   background-color: var(--secondary-color);
 }
 
-.listReponse input:active {
+.answer-btn.selected {
   background-color: var(--secondary-color);
 }
 
+#validate {
+  width: 100%;
 
-
-.boutonValider {
   border: 0;
   line-height: 2.7;
   margin-top: 0.3em;
@@ -139,7 +154,7 @@ header  {
 }
   
 
-.boutonValider:active {
+#validate:active {
   
   box-shadow:
     inset -2px -2px 3px rgba(255, 255, 255, 0.6),
