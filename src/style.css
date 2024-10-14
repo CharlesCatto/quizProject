@@ -1,6 +1,6 @@
 :root {
   --primary-color: rgba(11, 5, 71, 0.964);
-  --secondary-color: rgb(153, 33, 17);
+  --secondary-color: rgb(122, 35, 24);
   --dark: #001500;;
   --light: #f8fdf0;
 }
@@ -100,7 +100,7 @@ header  {
 
 
 
-.blockQuestion {
+.blockQuestions {
   margin-top: 1.4em;
 }
 
