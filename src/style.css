@@ -63,13 +63,31 @@ header  {
 .elementTop {
   margin-top: 0.1em;
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 65% 10% 25%;
   padding: 0 0.5em;
   
 }
 
-#Ariane {
-  width: 105%;
+#progress-bar {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.vent {
+  width: 1em;
+  height: 2em;
+  /* vertical-align: middle; */
+}
+
+.wizard {
+  width: 1.5em;
+  height: 2em;
+  vertical-align: middle;
+}
+
+#goldenSnitch {
+  width: 1.5em;
   align-self: center;
 }
 

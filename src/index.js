@@ -52,7 +52,7 @@ function nextQuestion() {
 // Fonction pour afficher le score final
 function showFinalScore() {
     // Mettre à jour la barre de progression une dernière fois
-    updateProgressBar(questionsToAsk.length + 1, questionsToAsk.length);
+    updateProgressBar(questionsToAsk.length, questionsToAsk.length);
 
     QUESTIONS.innerHTML = `
         <h2>Quiz terminé !</h2>
@@ -112,21 +112,21 @@ function updateProgressBar(currentQuestion, totalQuestions) {
     const progressBar = document.getElementById('progress-bar');
     let progressString = '';
     
-    // Ajouter un pour le "0" supplémentaire
+    // Ajuster la boucle pour inclure une position supplémentaire
     for (let i = 0; i <= totalQuestions; i++) {
         if (i < currentQuestion) {
-            progressString += '-';
-        } else if (i === currentQuestion && currentQuestion <= totalQuestions) {
-            progressString += '>';
+            progressString += '<img src="../public/images/ventGD.png" alt="vent" class="vent">';
+        } else if (i === currentQuestion) {
+            progressString += '<img src="../public/images/harry.png" alt="harry" class="wizard">';
         } else {
-            progressString += '0';
+            progressString += ' ';
         }
     }
     
-    // Si on est après la dernière question, on met le ">" à la fin
+    // Si on est à la fin du quiz, s'assurer que Harry est à la dernière position
     if (currentQuestion > totalQuestions) {
-        progressString = progressString.slice(0, -1) + '>';
+        progressString = progressString.slice(0, -1) + '<img src="../public/images/harry.png" alt="harry" class="wizard">';
     }
     
-    progressBar.textContent = progressString;
+    progressBar.innerHTML = progressString;
 }
