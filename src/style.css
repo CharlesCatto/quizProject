@@ -1,12 +1,13 @@
 :root {
-  --primary-color: rgba(11, 5, 71, 0.964);
-  --secondary-color: rgb(122, 35, 24);
+  --primary-color: rgba(192, 156, 40, 0.964);
+  --secondary-color: rgb(153, 33, 17);
   --dark: #001500;;
   --light: #f8fdf0;
 }
 
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "openSans";
 }
@@ -21,8 +22,6 @@
   src: url(../public/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
-
-
 a {
   text-decoration: none;
   font-weight: bold;
@@ -32,33 +31,28 @@ a:visited {
   color: var(--light);
 }
 
-
 h1 {
   font-family: "harryPotter";
   font-size: 3em;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(44, 44, 190), 0 0 0.2em rgb(255, 191, 0);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(22, 123, 106), 0 0 0.2em rgb(65, 98, 127);
+  padding: 0.5em 0;
+  color: rgb(210, 209, 203);
   padding: 1em;
-}
-
+  }
 
 body { 
   background-image: url(../public/images/parchemin.png);
 }
 
-
-
-
 header  {
   width: 100%;
-  min-height: 6em;
+  min-height: 5em;
   text-align: center;
   background-image: url(../public/images/img_header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   color: var(--light);
-  padding: 1.5em;
-
   @media screen and (min-width:992px) {
     padding: 4em;
     font-size: 1.5em;
@@ -69,69 +63,97 @@ header  {
 
 
 
+
 .elementTop {
-  margin-top: 0.8em;
+  margin-top: 0.5em;
   display: grid;
-  grid-template-columns: 82% 18%;
+  grid-template-columns: 75% 25%;
+  padding: 0 0.5em;
   @media screen and (min-width:992px) {
-    margin-top: 1.2em;
+    margin-top: 1.5em;
     margin-right: 0.5em;
   }
 }
 
 #Ariane {
-  width: 90%;
+  width: 105%;
+  align-self: center;
   @media screen and (min-width:992px) {
     width: 85%;
     padding: 0.5em;
   }
 }
 
-#chrono {
-  text-align: center;
+#timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(153, 33, 17);
+  border: solid var(--primary-color);
+  border-radius: 1.3em;
+  color: var(--light);
   @media screen and (min-width:992px) {
-  padding: 3em;
-  font-size: 1.5em;
-  }
- 
+    margin: 7em 3.2em;
+    padding: 2em;
+    border-radius: 6em;
+    }
+}
+
+#timer span {
+  font-weight: bolder;
+  font-size: large;
+  padding-right: 0.7em;
+  @media screen and (min-width:992px) {
+    font-size: 2.1em;
+    }
+}
+
+.timer-icon {
+  width: 3em;
+  height: 2.5em;
+  margin-right: 0.8em;
+  background-color: rgba(88, 33, 26, 0.39);
+  border-radius: 1.2em;
+  @media screen and (min-width:992px) {
+    width: 6em;
+    height: 5em;
+    }
 }
 
 
 
-
-
-.blockQuestions {
-  margin-top: 1.4em;
-}
-
-.questions {
+.blockQuestion {
   margin: 1em 1.2em;
   @media screen and (min-width:992px) {
-    margin: 3em 22em;
-    padding: 1em;
+    margin: 1 7em;
   }
 }
+
+
 
 .listReponse {
   display: flex;
   flex-direction: column;
   gap: 0.2em;
   @media screen and (min-width:992px) {
-    gap: 1em;
+    gap: 0.7em;
+    margin: 0 8em;
   }
 }
 
 .listReponse legend {
   font-weight: bold;
+  text-align: center;
   @media screen and (min-width:992px) {
    font-size: 1.6em; 
    margin: 0.6em 0;
   }
 }
 
-.listReponse input{
+.answer-btn {
   border: 0;
-  margin: 0.8em;
+  margin: 0.8em 0.3em;
   line-height: 3em;
   font-size: 1em;
   text-align: center;
@@ -139,27 +161,27 @@ header  {
   text-shadow: 1px 1px 1px var(--dark);
   border-radius: 1.5em;
   background-color: var(--primary-color);
+  cursor: pointer;
   @media screen and (min-width:992px) {
-    margin: 1.3em 3.2em ;
+    margin: 1.3em 3em ;
     line-height: 4.7em;
+    font-size: 1.3em;
     border-radius: 2.2em;
   }
-} 
+}
 
-.listReponse input:hover {
+.answer-btn:hover {
   background-color: var(--secondary-color);
 }
 
-.listReponse input:focus {
+.answer-btn.selected {
   background-color: var(--secondary-color);
 }
 
-
-
-.boutonValider {
-  border: 0;
-  line-height: 2.7;
-  margin-top: 0.3em;
+#validate {
+  width: 100%;
+  line-height: 2.7em;
+  margin-top: 0.6em;
   padding: 0 1em;
   font-size: 1em;
   text-align: center;
@@ -170,26 +192,27 @@ header  {
   box-shadow:
     inset 2px 2px 3px rgba(255, 255, 255, 0.6),
     inset -2px -2px 3px rgba(0, 0, 0, 0.6);
-    @media screen and (min-width:992px) {
-      margin: 1.3em 20em;
-      line-height: 3.7em;
-      border-radius: 2.2em;
-    }
+  @media screen and (min-width:992px) {
+    width: 25%;
+    line-height: 4em;
+    border-radius: 2.2em;
+  }
 }
   
 
-.boutonValider:focus {
+#validate:active {
+  
   box-shadow:
     inset -2px -2px 3px rgba(255, 255, 255, 0.6),
     inset 2px 2px 3px rgba(0, 0, 0, 0.6);
-}
+ }
 
 
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1.2em;
-}
+  margin-top: 1.5em;
+ }
 
 
