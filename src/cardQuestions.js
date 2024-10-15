@@ -1,25 +1,22 @@
 function createQuestion(question) {
-    let addQuestion = `
-    <article class="question">
-        
-
-              
-        <fieldset class="listReponse">
+    let addQuestion =`
+        <article class="question">
+          <fieldset class="listReponse">
             <legend>${question.legend}</legend>
-            
-            <input type="button" id="button" name="reponse1" value="Reponse 1" checked />
-
-            <input type="button" id="button" name="reponse2" value="Reponse 2" checked />
-
-            <input type="button" id="button" name="reponse3" value="Reponse 3" checked />
-
-            <input type="button" id="button" name="reponse4" value="Reponse 4" checked />
-
-
-            
+  
+            <button class="answer-btn" id="R1" name="answer">${question.R1}</button>
+            <button class="answer-btn" id="R2" name="answer">${question.R2}</button>
+            <button class="answer-btn" id="R3" name="answer">${question.R3}</button>
+            <button class="answer-btn" id="R4" name="answer">${question.R4}</button>
+  
           </fieldset>
-      </article>`;
-      
-      return addQuestion;
-
-}
+          
+            <button id="validate">VALIDER</button>
+          
+        
+        </article>`;
+    
+    return addQuestion;
+  }
+  
+  export default createQuestion;

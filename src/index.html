@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./style.css" />
+  <link rel="shortcut icon" href="../public/images/png-transparent-harry-potter-initials-hp-logo.png" type="image/x-icon">
   <title>Quiz des grands sorciers</title>
 </head>
 
@@ -19,41 +20,16 @@
   </header>
 
 
-
   <main>
 <!-- SECTION 1 -->
     <section class="elementTop">
       <img src="../public/images/Fil_ariane_provisoire.png" alt="Fil d'ariane" id="Ariane">
-      <div id="chrono">00:30</div>
+      <div id="timer"></div>
     </section>
 
 <!-- SECTION 2 -->
-    <section class="blockQuestions">
-      <article class="questions">
+    <section class="blockQuestions"></section>
 
-          <fieldset class="listReponse">
-            <legend>Quel est ton personnage préféré ?</legend>
-
-
-              <input type="button" id="button" name="reponse1" value="Reponse 1" checked />
-
-              <input type="button" id="button" name="reponse2" value="Reponse 2" checked />
-
-              <input type="button" id="button" name="reponse3" value="Reponse 3" checked />
-
-              <input type="button" id="button" name="reponse4" value="Reponse 4" checked />
-
-          </fieldset>
-          
-          <!-- Bt Valider -->
-          <p class="boutonValider">
-            <a href="#">Valider</a>
-          </p>
-
-      </article>
-    </section>
-
- 
   </main>
 
 <!-- Footer -->
@@ -63,7 +39,9 @@
     <p>Par Antoine, Charles, Elodie et Nabil</p>
   </footer>
 
-  <script src="./index.js"></script>
+  <script type="module" src="./index.js"></script>
+  <script src="./cardQuestion.js"></script>
+  <script src="./questionsToAsk.js"></script>
 </body>
 
 </html>
