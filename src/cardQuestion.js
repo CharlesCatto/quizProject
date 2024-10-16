@@ -1,6 +1,6 @@
 function createQuestion(question) {
   let addQuestion =`
-      <article class="question">
+      <article class="questions">
         <fieldset class="listReponse">
           <legend>${question.legend}</legend>
 
