@@ -56,7 +56,8 @@ function showFinalScore() {
     updateProgressBar(questionsToAsk.length, questionsToAsk.length);
 
     QUESTIONS.innerHTML = `
-        <h2>Quiz terminé !</h2>
+        <h2>Félicitation !</h2>
+        <h3>Vous avez terminer le QUIZ DES GRANDS SORCIERS</h3>
         <p>Votre score : ${score} / ${questionsToAsk.length}</p>
         <button id="restart">Rejouer</button>
     `;
