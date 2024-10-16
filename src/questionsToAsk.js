@@ -1,6 +1,6 @@
 const questionsToAsk = [
     {
-        legend : "Quel est le nom de la créature magique que seuls ceux qui ont vu la mort peuvent voir ?",
+        legend : "-Quel est le nom de la créature magique que seuls ceux qui ont vu la mort peuvent voir ?-",
         R1 : "Un hippogriffe",
         R2 : "Un thestral",
         R3 : "Un traquenard",
@@ -8,7 +8,7 @@ const questionsToAsk = [
         lienValider : "#R2",
     },
     {
-        legend : "Quel est le prénom de Voldemort ?",
+        legend : "-Quel est le prénom de Voldemort ?-",
         R1 : "Tom",
         R2 : "Albus",
         R3 : "Severus",
@@ -16,7 +16,7 @@ const questionsToAsk = [
         lienValider : "#R1",
     },
     {
-        legend : "Quel est le nom du professeur de potions à Poudlard dans les premiers livres ?",
+        legend : "-Quel est le nom du professeur de potions à Poudlard dans les premiers livres ?-",
         R1 : "Horace Slughorn",
         R2 : "Severus Rogue",
         R3 : "Snoop Dogg",
@@ -24,7 +24,7 @@ const questionsToAsk = [
         lienValider : "#R2",
     },
     {
-        legend : "Quel est le nom du serpent de Voldemort ?",
+        legend : "-Quel est le nom du serpent de Voldemort ?-",
         R1 : "Basilic",
         R2 : "Nagini",
         R3 : "Fumseck",
@@ -32,7 +32,7 @@ const questionsToAsk = [
         lienValider : "#R2",
     },
     {
-        legend : "Quelle position Harry joue-t-il dans l'équipe de Quidditch de Gryffondor ?",
+        legend : "-Quelle position Harry joue-t-il dans l'équipe de Quidditch de Gryffondor ?-",
         R1 : "Défenseur central",
         R2 : "Gardien",
         R3 : "Batteur",
@@ -40,7 +40,7 @@ const questionsToAsk = [
         lienValider : "#R4",
     },
     {
-        legend : "Quel est le nom du pub où Harry rencontre Hagrid pour la première fois ?",
+        legend : "-Quel est le nom du pub où Harry rencontre Hagrid pour la première fois ?-",
         R1 : "Le Chaudron Baveur",
         R2 : "Le Poudlard Express",
         R3 : "La Taverne des Trois Balais",
@@ -48,7 +48,7 @@ const questionsToAsk = [
         lienValider : "#R1",
     },
     {
-        legend : "Qui a tué Dobby, l'elfe de maison ?",
+        legend : "-Qui a tué Dobby, l'elfe de maison ?-",
         R1 : "Lucius Malfoy",
         R2 : "La drogue",
         R3 : "Bellatrix Lestrange",
@@ -56,7 +56,7 @@ const questionsToAsk = [
         lienValider : "#R3",
     },
     {
-        legend : "Quel sort Harry utilise-t-il pour désarmer ses adversaires ?",
+        legend : "-Quel sort Harry utilise-t-il pour désarmer ses adversaires ?-",
         R1 : "Expelliarmus",
         R2 : "Stupefix",
         R3 : "Déshabillus",
@@ -64,7 +64,7 @@ const questionsToAsk = [
         lienValider : "#R1",
     },
     {
-        legend : "Quelle est la couleur des Beuglantes (les lettres magiques qui crient)?",
+        legend : "-Quelle est la couleur des Beuglantes (les lettres magiques qui crient)?-",
         R1 : "Jaune",
         R2 : "Rouge",
         R3 : "Blanche",
@@ -72,7 +72,7 @@ const questionsToAsk = [
         lienValider : "#R2",
     },
     {
-        legend : "Quel est le nom du dragon que Hagrid élève dans 'Harry Potter et la Coupe de Feu' ?",
+        legend : "-Quel est le nom du dragon que Hagrid élève dans 'Harry Potter et la Coupe de Feu' ?-",
         R1 : "Norbert",
         R2 : "Jean",
         R3 : "Smaug",

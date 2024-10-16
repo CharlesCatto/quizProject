@@ -119,7 +119,7 @@ function updateProgressBar(currentQuestion, totalQuestions) {
         } else if (i === currentQuestion) {
             progressString += '<img src="../public/images/harry.png" alt="harry" class="wizard">';
         } else {
-            progressString += ' ';
+            progressString += '_';
         }
     }
     
