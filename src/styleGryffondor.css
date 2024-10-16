@@ -34,7 +34,7 @@ a:visited {
 h1 {
   font-family: "harryPotter";
   font-size: 3em;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(22, 123, 106), 0 0 0.2em rgb(65, 98, 127);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(69, 104, 98), 0 0 0.2em rgb(87, 132, 172);
   padding: 0.5em 0;
   color: rgb(210, 209, 203);
   padding: 1em;
@@ -61,17 +61,13 @@ header  {
 
 
 
-
-
-
 .elementTop {
-  margin-top: 0.5em;
+  margin-top: 0.4em;
   display: grid;
-  grid-template-columns: 65% 10% 25%;
-  padding: 0 0.5em;
+  grid-template-columns: 77% 7% 16%;
   @media screen and (min-width:992px) {
-    margin-top: 1.5em;
-    margin-right: 0.5em;
+    margin-top: 1em;
+    margin-right: 0.3em;
   }
 }
 
@@ -80,27 +76,39 @@ header  {
   justify-content: space-between;
   align-items: center;
   color: rgb(0, 0, 0, 0);
+  margin: 0.3em 0;
+  @media screen and (min-width:992px) {
+    margin: 0 0.5em;
+  }
 }
 
 .vent {
-  width: 1em;
-  height: em;
+  width: 1.2em;
+  height: 1.2em;
   align-content: center;
+  @media screen and (min-width:992px) {
+    width: 4.8em;
+    height: 3em;
+  }
 }
 
 .wizard {
-  width: 1.5em;
+  width: 2em;
   height: 2em;
   vertical-align: middle;
+  @media screen and (min-width:992px) {
+    width: 5.6em;
+    height: 4.6em;
+  }
 }
 
-
 #goldenSnitch {
-  width: 1.5em;
+  width: 1.2em;
   align-self: center;
+  margin-bottom: 0.5em;
   @media screen and (min-width:992px) {
-    width: 85%;
-    padding: 0.5em;
+    width: 2.3em;
+    margin-bottom: 1.3em;
   }
 }
 
@@ -110,35 +118,38 @@ header  {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin: 0.3em 0.1em;
   background-color: rgb(153, 33, 17);
   border: solid var(--primary-color);
-  border-radius: 1.3em;
+  border-radius: 1.2em;
   color: var(--light);
   @media screen and (min-width:992px) {
-    margin: 7em 3.2em;
-    padding: 2em;
+    margin: 7% 15% 15% 10%;
     border-radius: 6em;
+    }
+}
+
+.timer-icon {
+  width: 2.1em;
+  height: 1.8em;
+  background-color: rgba(88, 33, 26, 0.39);
+  border-radius: 1em;
+  @media screen and (min-width:992px) {
+    width: 6em;
+    height: 5em;
+    border-radius: 3em;
+    margin-right: 20%;
+    padding: 8%;
     }
 }
 
 #timer span {
   font-weight: bolder;
-  font-size: large;
-  padding-right: 0.7em;
+  font-size: small;;
+  padding-right: 0.5em;
   @media screen and (min-width:992px) {
-    font-size: 2.1em;
-    }
-}
-
-.timer-icon {
-  width: 3em;
-  height: 2.5em;
-  margin-right: 0.8em;
-  background-color: rgba(88, 33, 26, 0.39);
-  border-radius: 1.2em;
-  @media screen and (min-width:992px) {
-    width: 6em;
-    height: 5em;
+    font-size: x-large;
+    padding-right: 25%;
     }
 }
 
@@ -160,6 +171,7 @@ header  {
     gap: 0.7em;
   }
 }
+
 
 .listReponse legend {
   font-weight: bold;

@@ -1,5 +1,6 @@
 import createQuestion from "./cardQuestion.js";
 import questionsToAsk from "./questionsToAsk.js";
+import displayPopup from "./popUp.js";
 
 const QUESTIONS = document.querySelector(".blockQuestion");
 const timerElement = document.getElementById('timer');
@@ -130,3 +131,5 @@ function updateProgressBar(currentQuestion, totalQuestions) {
     
     progressBar.innerHTML = progressString;
 }
+
+displayPopup();
