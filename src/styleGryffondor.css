@@ -61,11 +61,7 @@ header  {
 
 
 
-<<<<<<< HEAD
 .elementTop {
-=======
-elementTop {
->>>>>>> b260721fe420b5ba1a82fad2ba0b71df825ae264
   margin-top: 0.4em;
   display: grid;
   grid-template-columns: 77% 7% 16%;
@@ -75,10 +71,6 @@ elementTop {
   }
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b260721fe420b5ba1a82fad2ba0b71df825ae264
 #progress-bar {
   display: flex;
   justify-content: space-between;
@@ -110,10 +102,6 @@ elementTop {
   }
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b260721fe420b5ba1a82fad2ba0b71df825ae264
 #goldenSnitch {
   width: 1.2em;
   align-self: center;
@@ -141,10 +129,6 @@ elementTop {
     }
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b260721fe420b5ba1a82fad2ba0b71df825ae264
 .timer-icon {
   width: 2.1em;
   height: 1.8em;
@@ -168,7 +152,6 @@ elementTop {
     padding-right: 25%;
     }
 }
-
 
 
 .blockQuestion {
@@ -198,8 +181,6 @@ elementTop {
   }
 }
 
-
-
 .answer-btn {
   border: 0;
   margin: 0.8em 0.3em;
@@ -219,7 +200,6 @@ elementTop {
   }
 }
 
-
 .answer-btn:hover {
   background-color: var(--secondary-color);
 }
@@ -227,7 +207,6 @@ elementTop {
 .answer-btn.selected {
   background-color: var(--secondary-color);
 }
-
 
 #validate {
   width: 100%;
@@ -254,6 +233,7 @@ elementTop {
   
 
 #validate:active {
+  
   box-shadow:
     inset -2px -2px 3px rgba(255, 255, 255, 0.6),
     inset 2px 2px 3px rgba(0, 0, 0, 0.6);

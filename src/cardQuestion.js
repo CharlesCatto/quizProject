@@ -11,7 +11,7 @@ function createQuestion(question) {
 
         </fieldset>
         
-        <button id="validate">VALIDER</button>
+        <button id="validate" class="customizable">VALIDER</button>
         
       
       </article>`;
