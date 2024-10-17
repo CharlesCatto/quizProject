@@ -53,19 +53,24 @@ function nextQuestion() {
 
 // Fonction pour afficher le score final
 function showFinalScore() {
+    clearInterval(timer);
+    // Remplacer l'icône du timer par Hogwarts
+    timerElement.innerHTML = `
+        <img src="../public/images/hogward.png" alt="Hogwarts" class="hogward">
+        <span>--</span>
+    `;
     // Mettre à jour la barre de progression une dernière fois
-    updateProgressBar(questionsToAsk.length, questionsToAsk.length);
+    updateProgressBar(questionsToAsk.length, questionsToAsk.length, true);
 
     QUESTIONS.innerHTML = `
-        <h2>Quiz terminé !</h2>
-        <p>Votre score : ${score} / ${questionsToAsk.length}</p>
-        <button class="customizable" id="restart">Rejouer</button>
+    <div id="end">
+        <h2>Félicitation ! Tu as fini le quiz des grands sorciers</h2>
+        <p class="twp-intro">Votre score : ${score} / ${questionsToAsk.length}</p>
+        <button id="restart">Rejouer</button>
+        </div>
     `;
     document.getElementById('restart').addEventListener('click', () => {
-        currentQuestionIndex = 0;
-        score = 0;
-        updateProgressBar(0, questionsToAsk.length);
-        displayQuestion(currentQuestionIndex);
+        location.reload();
     });
 }
 
@@ -85,22 +90,24 @@ QUESTIONS.innerHTML = `<div id="twp-container">
             <p class="twp-intro" id= "intro"> Avant de passer cette épreuve, choisi la maison qui te correspond. Chacune des maisons de Poudlard a 
               quelque chose d'unique à offrir:
             </p>
-              <p class="twp-intro"> Serdaigle: Toujours en quête de nouvelles idées.</p>
+              <p class="twp-intro"> <em class="chosenHouse">Serdaigle</em>: Toujours en quête de nouvelles idées.</p>
               <div id="twp-popup-footer"><button id="Serdaigle">Serdaigle</button></div>
-              <p class="twp-intro"> Serpentard: Déterminer à atteindre tes objectifs.</p>
+              <p class="twp-intro"> <em class="chosenHouse">Serpentard</em>: Déterminer à atteindre tes objectifs.</p>
               <div id="twp-popup-footer"><button id="Serpentard">Serpentard</button> </div>
-              <p class="twp-intro"> Poufsouffle: Tu valorises la justice et l'amitié.</p> 
+              <p class="twp-intro"> <em class="chosenHouse">Poufsouffle</em>: Tu valorises la justice et l'amitié.</p> 
               <div id="twp-popup-footer"><button id="Poufsouffle">Poufsouffle</button></div>
-              <p class="twp-intro"> Gryffondor: Affronter tous les défis avec bravoure.</p>
+              <p class="twp-intro"> <em class="chosenHouse">Gryffondor</em>: Affronter tous les défis avec bravoure.</p>
               <div id="twp-popup-footer"><button id="Gryffondor">Gryffondor</button> 
          </div>
+         <button id="start" classe="customizable">START</button>
         </div>
-    </div>
-    <button id="start" classe="customizable">START</button>`;
+        </div>
+        `;
 
 document.getElementById("start").addEventListener("click", () => {
   displayQuestion(currentQuestionIndex);
 });
+
 
 // Initialisation de la barre de progression
 updateProgressBar(0, questionsToAsk.length);
@@ -129,23 +136,18 @@ QUESTIONS.addEventListener('click', (e) => {
 });
 
 //fonction progress-bar
-function updateProgressBar(currentQuestion, totalQuestions) {
+function updateProgressBar(currentQuestion, totalQuestions, isFinished = false) {
     const progressBar = document.getElementById('progress-bar');
     let progressString = '';
     
-    // Ajuster la boucle pour inclure une position supplémentaire
-    for (let i = 0; i <= totalQuestions; i++) {
+    for (let i = 0; i < totalQuestions; i++) {
         if (i < currentQuestion) {
             progressString += '<img src="../public/images/wagon.png" alt="wagons" class="wagon">';
-        } else if (i === currentQuestion) {
-            progressString += '<img src="../public/images/locomotive.png" alt="loco" class="loco">';
-        } 
+        }
     }
     
-    // Si on est à la fin du quiz, s'assurer que Harry est à la dernière position
-    if (currentQuestion > totalQuestions) {
-        progressString = progressString.slice(0, -1) + '<img src="../public/images/locomotive.png" alt="locomotive" class="loco">';
-    }
+    // Ajouter la locomotive à la fin, qu'on soit en cours de quiz ou à la fin
+    progressString += '<img src="../public/images/locomotive.png" alt="loco" class="loco">';
     
     progressBar.innerHTML = progressString;
 }
