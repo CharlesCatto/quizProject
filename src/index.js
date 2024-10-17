@@ -53,12 +53,17 @@ function nextQuestion() {
 
 // Fonction pour afficher le score final
 function showFinalScore() {
+    clearInterval(timer);
+    // Remplacer l'icône du timer par Hogwarts
+    timerElement.innerHTML = `
+        <img src="../public/images/hogward.png" alt="Hogwarts" class="hogward">
+        <span>--</span>
+    `;
     // Mettre à jour la barre de progression une dernière fois
-    updateProgressBar(questionsToAsk.length, questionsToAsk.length);
+    updateProgressBar(questionsToAsk.length, questionsToAsk.length, true);
 
     QUESTIONS.innerHTML = `
-        <h2>Félicitation !</h2>
-        <h3>Vous avez terminer le QUIZ DES GRANDS SORCIERS</h3>
+        <h2>Quiz terminé !</h2>
         <p>Votre score : ${score} / ${questionsToAsk.length}</p>
         <button id="restart">Rejouer</button>
     `;
@@ -67,6 +72,7 @@ function showFinalScore() {
         score = 0;
         updateProgressBar(0, questionsToAsk.length);
         displayQuestion(currentQuestionIndex);
+        startTimer();
     });
 }
 
@@ -124,25 +130,18 @@ QUESTIONS.addEventListener('click', (e) => {
 });
 
 //fonction progress-bar
-function updateProgressBar(currentQuestion, totalQuestions) {
+function updateProgressBar(currentQuestion, totalQuestions, isFinished = false) {
     const progressBar = document.getElementById('progress-bar');
     let progressString = '';
     
-    // Ajuster la boucle pour inclure une position supplémentaire
-    for (let i = 0; i <= totalQuestions; i++) {
+    for (let i = 0; i < totalQuestions; i++) {
         if (i < currentQuestion) {
             progressString += '<img src="../public/images/wagon.png" alt="wagons" class="wagon">';
-        } else if (i === currentQuestion) {
-            progressString += '<img src="../public/images/locomotive.png" alt="loco" class="loco">';
-        } else {
-            progressString += '_';
         }
     }
     
-    // Si on est à la fin du quiz, s'assurer que Harry est à la dernière position
-    if (currentQuestion > totalQuestions) {
-        progressString = progressString.slice(0, -1) + '<img src="../public/images/locomotive.png" alt="locomotive" class="loco">';
-    }
+    // Ajouter la locomotive à la fin, qu'on soit en cours de quiz ou à la fin
+    progressString += '<img src="../public/images/locomotive.png" alt="loco" class="loco">';
     
     progressBar.innerHTML = progressString;
 }

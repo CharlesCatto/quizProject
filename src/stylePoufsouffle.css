@@ -108,6 +108,15 @@ header {
   }
 }
 
+.hogward {
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  @media screen and (min-width:992px) {
+      width: 5.6em;
+      height: 4.6em;
+  }
+}
 
 #timer.Poufsouffle {
   display: flex;

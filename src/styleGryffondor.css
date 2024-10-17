@@ -104,6 +104,16 @@ header {
     margin-top: 1.2%;
   }}
 
+.hogward {
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  @media screen and (min-width:992px) {
+      width: 5.6em;
+      height: 4.6em;
+  }
+}
+
 /* ajouter customize sur bouton start et rejouer */
 
 #timer.Gryffondor {
