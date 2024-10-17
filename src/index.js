@@ -2,6 +2,7 @@ import createQuestion from "./cardQuestion.js";
 import questionsToAsk from "./questionsToAsk.js";
 import displayPopup from "./popUp.js";
 
+
 const QUESTIONS = document.querySelector(".blockQuestion");
 const timerElement = document.getElementById('timer');
 let currentQuestionIndex = 0;
@@ -58,7 +59,7 @@ function showFinalScore() {
     QUESTIONS.innerHTML = `
         <h2>Quiz terminé !</h2>
         <p>Votre score : ${score} / ${questionsToAsk.length}</p>
-        <button id="restart">Rejouer</button>
+        <button class="customizable" id="restart">Rejouer</button>
     `;
     document.getElementById('restart').addEventListener('click', () => {
         currentQuestionIndex = 0;
@@ -77,9 +78,28 @@ function checkAnswer(selectedAnswer, correctAnswer) {
 }
 
 // Ajout du bouton START
-QUESTIONS.innerHTML = '<button id="start">START</button>';
-document.getElementById('start').addEventListener('click', () => {
-    displayQuestion(currentQuestionIndex);
+QUESTIONS.innerHTML = `<div id="twp-container">
+        <div id="twp-popup">
+          <h2 id="twp-popup-title">Monte dans le Poudlard Express !</h2>
+        
+            <p class="twp-intro" id= "intro"> Avant de passer cette épreuve, choisi la maison qui te correspond. Chacune des maisons de Poudlard a 
+              quelque chose d'unique à offrir:
+            </p>
+              <p class="twp-intro"> Serdaigle: Toujours en quête de nouvelles idées.</p>
+              <div id="twp-popup-footer"><button id="Serdaigle">Serdaigle</button></div>
+              <p class="twp-intro"> Serpentard: Déterminer à atteindre tes objectifs.</p>
+              <div id="twp-popup-footer"><button id="Serpentard">Serpentard</button> </div>
+              <p class="twp-intro"> Poufsouffle: Tu valorises la justice et l'amitié.</p> 
+              <div id="twp-popup-footer"><button id="Poufsouffle">Poufsouffle</button></div>
+              <p class="twp-intro"> Gryffondor: Affronter tous les défis avec bravoure.</p>
+              <div id="twp-popup-footer"><button id="Gryffondor">Gryffondor</button> 
+         </div>
+        </div>
+    </div>
+    <button id="start" classe="customizable">START</button>`;
+
+document.getElementById("start").addEventListener("click", () => {
+  displayQuestion(currentQuestionIndex);
 });
 
 // Initialisation de la barre de progression
@@ -116,9 +136,9 @@ function updateProgressBar(currentQuestion, totalQuestions) {
     // Ajuster la boucle pour inclure une position supplémentaire
     for (let i = 0; i <= totalQuestions; i++) {
         if (i < currentQuestion) {
-            progressString += '<img src="../public/images/ventGD.png" alt="vent" class="vent">';
+            progressString += '<img src="../public/images/wagon.png" alt="wagons" class="wagon">';
         } else if (i === currentQuestion) {
-            progressString += '<img src="../public/images/harry.png" alt="harry" class="wizard">';
+            progressString += '<img src="../public/images/locomotive.png" alt="loco" class="loco">';
         } else {
             progressString += '_';
         }
@@ -126,7 +146,7 @@ function updateProgressBar(currentQuestion, totalQuestions) {
     
     // Si on est à la fin du quiz, s'assurer que Harry est à la dernière position
     if (currentQuestion > totalQuestions) {
-        progressString = progressString.slice(0, -1) + '<img src="../public/images/harry.png" alt="harry" class="wizard">';
+        progressString = progressString.slice(0, -1) + '<img src="../public/images/locomotive.png" alt="locomotive" class="loco">';
     }
     
     progressBar.innerHTML = progressString;
