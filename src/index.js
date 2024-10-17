@@ -2,6 +2,7 @@ import createQuestion from "./cardQuestion.js";
 import questionsToAsk from "./questionsToAsk.js";
 import displayPopup from "./popUp.js";
 
+
 const QUESTIONS = document.querySelector(".blockQuestion");
 const timerElement = document.getElementById('timer');
 let currentQuestionIndex = 0;
@@ -77,7 +78,20 @@ function checkAnswer(selectedAnswer, correctAnswer) {
 }
 
 // Ajout du bouton START
-QUESTIONS.innerHTML = '<button id="start">START</button>';
+QUESTIONS.innerHTML = `
+<div class="customizable" id="twp-container">
+    <div id="twp-overlay">
+        <div id="twp-popup">
+        <h2 id="twp-popup-title">Bienvenue Sorcier!</h2>
+            <p class="twp-intro">moment?</p>
+            <div id="twp-popup-footer"><button id="Serdaigle">Serdaigle</button></div>
+            <div id="twp-popup-footer"><button id="Serpentard">Serpentard</button></div>
+            <div id="twp-popup-footer"><button id="Poufsouffle">Poufsouffle</button></div>
+            <div id="twp-popup-footer"><button id="Gryffondor">Gryffondor</button></div>
+        </div>
+    </div>
+</div>
+<button id="start" class="customizable">START</button>`;
 document.getElementById('start').addEventListener('click', () => {
     displayQuestion(currentQuestionIndex);
 });
@@ -116,9 +130,9 @@ function updateProgressBar(currentQuestion, totalQuestions) {
     // Ajuster la boucle pour inclure une position supplémentaire
     for (let i = 0; i <= totalQuestions; i++) {
         if (i < currentQuestion) {
-            progressString += '<img src="../public/images/ventGD.png" alt="vent" class="vent">';
+            progressString += '<img src="../public/images/wagon.png" alt="wagons" class="wagon">';
         } else if (i === currentQuestion) {
-            progressString += '<img src="../public/images/harry.png" alt="harry" class="wizard">';
+            progressString += '<img src="../public/images/locomotive.png" alt="loco" class="loco">';
         } else {
             progressString += '_';
         }
@@ -126,7 +140,7 @@ function updateProgressBar(currentQuestion, totalQuestions) {
     
     // Si on est à la fin du quiz, s'assurer que Harry est à la dernière position
     if (currentQuestion > totalQuestions) {
-        progressString = progressString.slice(0, -1) + '<img src="../public/images/harry.png" alt="harry" class="wizard">';
+        progressString = progressString.slice(0, -1) + '<img src="../public/images/locomotive.png" alt="locomotive" class="loco">';
     }
     
     progressBar.innerHTML = progressString;
