@@ -139,9 +139,7 @@ function updateProgressBar(currentQuestion, totalQuestions) {
             progressString += '<img src="../public/images/wagon.png" alt="wagons" class="wagon">';
         } else if (i === currentQuestion) {
             progressString += '<img src="../public/images/locomotive.png" alt="loco" class="loco">';
-        } else {
-            progressString += '_';
-        }
+        } 
     }
     
     // Si on est à la fin du quiz, s'assurer que Harry est à la dernière position
