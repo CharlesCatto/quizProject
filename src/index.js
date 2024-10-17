@@ -59,7 +59,7 @@ function showFinalScore() {
     QUESTIONS.innerHTML = `
         <h2>Quiz terminé !</h2>
         <p>Votre score : ${score} / ${questionsToAsk.length}</p>
-        <button id="restart">Rejouer</button>
+        <button class="customizable" id="restart">Rejouer</button>
     `;
     document.getElementById('restart').addEventListener('click', () => {
         currentQuestionIndex = 0;
@@ -78,22 +78,28 @@ function checkAnswer(selectedAnswer, correctAnswer) {
 }
 
 // Ajout du bouton START
-QUESTIONS.innerHTML = `
-<div class="customizable" id="twp-container">
-    <div id="twp-overlay">
+QUESTIONS.innerHTML = `<div id="twp-container">
         <div id="twp-popup">
-        <h2 id="twp-popup-title">Bienvenue Sorcier!</h2>
-            <p class="twp-intro">moment?</p>
-            <div id="twp-popup-footer"><button id="Serdaigle">Serdaigle</button></div>
-            <div id="twp-popup-footer"><button id="Serpentard">Serpentard</button></div>
-            <div id="twp-popup-footer"><button id="Poufsouffle">Poufsouffle</button></div>
-            <div id="twp-popup-footer"><button id="Gryffondor">Gryffondor</button></div>
+          <h2 id="twp-popup-title">Monte dans le Poudlard Express !</h2>
+        
+            <p class="twp-intro" id= "intro"> Avant de passer cette épreuve, choisi la maison qui te correspond. Chacune des maisons de Poudlard a 
+              quelque chose d'unique à offrir:
+            </p>
+              <p class="twp-intro"> Serdaigle: Toujours en quête de nouvelles idées.</p>
+              <div id="twp-popup-footer"><button id="Serdaigle">Serdaigle</button></div>
+              <p class="twp-intro"> Serpentard: Déterminer à atteindre tes objectifs.</p>
+              <div id="twp-popup-footer"><button id="Serpentard">Serpentard</button> </div>
+              <p class="twp-intro"> Poufsouffle: Tu valorises la justice et l'amitié.</p> 
+              <div id="twp-popup-footer"><button id="Poufsouffle">Poufsouffle</button></div>
+              <p class="twp-intro"> Gryffondor: Affronter tous les défis avec bravoure.</p>
+              <div id="twp-popup-footer"><button id="Gryffondor">Gryffondor</button> 
+         </div>
         </div>
     </div>
-</div>
-<button id="start" class="customizable">START</button>`;
-document.getElementById('start').addEventListener('click', () => {
-    displayQuestion(currentQuestionIndex);
+    <button id="start" classe="customizable">START</button>`;
+
+document.getElementById("start").addEventListener("click", () => {
+  displayQuestion(currentQuestionIndex);
 });
 
 // Initialisation de la barre de progression
