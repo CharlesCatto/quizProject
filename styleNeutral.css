@@ -14,12 +14,12 @@
 
 @font-face {
   font-family: "harryPotter";
-  src: url(../public/fonts/HARRYP__.TTF);
+  src: url(./public/fonts/HARRYP__.TTF);
 }
 
 @font-face {
   font-family: "openSans";
-  src: url(../public/fonts/OpenSans-VariableFont_wdth\wght.ttf);
+  src: url(./public/fonts/OpenSans-VariableFont_wdth\wght.ttf);
 }
 
 a {
@@ -35,7 +35,7 @@ header {
   width: 100%;
   min-height: 5em;
   text-align: center;
-  background-image: url(../public/images/img_header.png);
+  background-image: url(./public/images/img_header.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -47,14 +47,14 @@ header {
 }
 
 body {
-  background-image: url(../public/images/parchemin.png);
+  background-image: url(./public/images/parchemin.png);
 }
 
-header {
+/* header {
   width: 100%;
   max-height: 15em;
   text-align: center;
-  background-image: url(../public/images/img_header.png);
+  background-image: url(./public/images/img_header.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -66,7 +66,7 @@ header {
     font-size: 2em;
     min-height: 15em;
   }
-}
+} */
 
 .elementTop {
   margin-top: 0.4em;
