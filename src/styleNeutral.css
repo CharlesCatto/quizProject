@@ -31,16 +31,18 @@ a:visited {
   color: var(--light);
 }
 
-h1 {
-  font-family: "harryPotter";
-  font-size: 3em;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(69, 104, 98),
-    0 0 0.2em rgb(87, 132, 172);
-  padding: 0.5em 0;
-  color: rgb(210, 209, 203);
-  padding: 1em;
-  @media screen and (max-width: 992px) {
-  font-size: 2em;
+header {
+  width: 100%;
+  min-height: 5em;
+  text-align: center;
+  background-image: url(../public/images/img_header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--light);
+  @media screen and (min-width:992px) {
+    padding: 4em;
+    font-size: 1.5em;
   }
 }
 
