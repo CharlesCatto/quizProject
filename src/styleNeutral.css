@@ -177,7 +177,6 @@ header {
   margin-left: 35%;
   margin-right: 35%;
   line-height: 2.7em;
-  padding: 0 2em;
   font-size: 1em;
   text-align: center;
   color: var(--light);
@@ -340,4 +339,15 @@ em {
   font-size: larger;
   font-weight: bold;
   margin-bottom: 0.5em;
+}
+
+#Voldemort {
+  opacity: 0;
+  position: absolute;
+  left: 0%;
+  top: 100%;
+}
+
+#Voldemort:hover {
+  opacity: 1;
 }
