@@ -2,7 +2,7 @@ const questionsToAsk = [
     {
         legend : "-Quel est le nom de la créature magique que seuls ceux qui ont vu la mort peuvent voir ?-",
         R1 : "Un hippogriffe",
-        R2 : "Un thestral",
+        R2 : "Un sombral",
         R3 : "Un traquenard",
         R4 : "Un niffleur",
         lienValider : "#R2",
