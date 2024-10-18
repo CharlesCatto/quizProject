@@ -161,7 +161,12 @@ header {
 #twp-container {
   margin-left: 10%;
   margin-right: 10%;
-  align-items: center;
+}
+
+#twp-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .twp-intro {

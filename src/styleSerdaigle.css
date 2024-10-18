@@ -37,27 +37,8 @@
     inset -2px -2px 3px rgba(141, 140, 143, 0.646);
 }
 
-#start.Serdaigle {
-  margin-left: 35%;
-  margin-right: 35%;
-  line-height: 2.7em;
-  padding: 0 2em;
-  font-size: 1em;
-  text-align: center;
-  color: var(--light);
-  text-shadow: 1px 1px 1px var(--dark);
-  border-radius: 1.5em;
-  background-color: var(--secondary-color-Serdaigle);
-  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-    inset -2px -2px 3px rgba(141, 140, 143, 0.646);
-  @media screen and (min-width: 992px) {
-    min-width: 30%;
-    margin-top: 1em;
-    margin-left: 35%;
-    margin-right: 35%;
-    line-height: 3em;
-    border-radius: 2.2em;
-  }
+#twp-popup-footer #Serdaigle:focus {
+  background-color: rgb(28, 115, 181);
 }
 
 .answer-btn.Serdaigle {
