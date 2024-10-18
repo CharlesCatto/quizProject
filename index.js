@@ -21,14 +21,14 @@ function displayQuestion(index) {
 function startTimer() {
     let timeLeft = 15;
     timerElement.innerHTML = `
-        <img src="../public/images/hourglass.png" alt="Sablier" class="timer-icon">
+        <img src="./public/images/hourglass.png" alt="Sablier" class="timer-icon">
         <span>${timeLeft}</span>
     `;
     
     timer = setInterval(() => {
         timeLeft--;
         timerElement.innerHTML = `
-            <img src="../public/images/hourglass.png" alt="Sablier" class="timer-icon">
+            <img src="./public/images/hourglass.png" alt="Sablier" class="timer-icon">
             <span>${timeLeft}</span>
         `;
         
@@ -56,7 +56,7 @@ function showFinalScore() {
     clearInterval(timer);
     // Remplacer l'icône du timer par Hogwarts
     timerElement.innerHTML = `
-        <img src="../public/images/hogward.png" alt="Hogwarts" class="hogward">
+        <img src="./public/images/hogward.png" alt="Hogwarts" class="hogward">
         <span>--</span>
     `;
     // Mettre à jour la barre de progression une dernière fois
@@ -142,12 +142,12 @@ function updateProgressBar(currentQuestion, totalQuestions, isFinished = false) 
     
     for (let i = 0; i < totalQuestions; i++) {
         if (i < currentQuestion) {
-            progressString += '<img src="../public/images/wagon.png" alt="wagons" class="wagon">';
+            progressString += '<img src="./public/images/wagon.png" alt="wagons" class="wagon">';
         }
     }
     
     // Ajouter la locomotive à la fin, qu'on soit en cours de quiz ou à la fin
-    progressString += '<img src="../public/images/locomotive.png" alt="loco" class="loco">';
+    progressString += '<img src="./public/images/locomotive.png" alt="loco" class="loco">';
     
     progressBar.innerHTML = progressString;
 }
